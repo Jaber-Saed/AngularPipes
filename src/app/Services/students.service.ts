@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { StudentsModule } from '../students/students.module';
 
-
 @Injectable({
   providedIn: 'root',
 })
@@ -58,4 +57,3 @@ export class StudentsService {
     return this._students;
   }
 }
-

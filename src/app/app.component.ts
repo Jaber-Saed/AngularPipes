@@ -16,10 +16,11 @@ export class AppComponent implements OnInit {
   constructor(private studentsService: StudentsService) {}
 
   ngOnInit(): void {
-    this.students = this.studentsService.students.map(x=> ({
+    this.students = this.studentsService.students.map((x) => ({
       ...x,
-      DOBs:x.DOB?.toDateString()}))
-      this.totalMarks = this.studentsService.totalMarks;
+      DOBs: x.DOB?.toDateString(),
+    }));
+    this.totalMarks = this.studentsService.totalMarks;
     console.warn(this.students);
   }
 }

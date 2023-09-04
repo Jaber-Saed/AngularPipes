@@ -6,9 +6,9 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
 })
 export class StudentsModule {
-  name: string = '';
-  course: string = '';
-  marks: number = 0;
-  DOB?: Date ;
-  gender: string = '';
+  name: string ;
+  course: string ;
+  marks: number ;
+  DOB: Date ;
+  gender: string ;
 }

@@ -10,13 +10,14 @@ import { StudentsModule } from './students/students.module';
 })
 export class AppComponent implements OnInit {
   title = 'AngularPipes';
-  students?: StudentsModule[];
-  totalMarks: number = 0;
+  students: StudentsModule[];
+  totalMarks: number;
 
   constructor(private studentsService: StudentsService) {}
 
   ngOnInit(): void {
-    this.students = this.studentsService.students;
+
+    this.students = this.studentsService.students
     this.totalMarks = this.studentsService.totalMarks;
   }
 }

@@ -10,7 +10,7 @@ import { StudentsModule } from './students/students.module';
 })
 export class AppComponent implements OnInit {
   title = 'AngularPipes';
-  filterText: string;
+  filterText: number;
   students: StudentsModule[];
   totalMarks: number;
 
@@ -22,6 +22,25 @@ export class AppComponent implements OnInit {
       DOBs: x.DOB?.toDateString(),
     }));
     this.totalMarks = this.studentsService.totalMarks;
+    console.warn(this.students);
+  }
+
+  AddDumySTudent() {
+    let studentCopy = Object.assign([], this.students);
+    studentCopy.push({
+      name: 'test',
+      course: 'test',
+      marks: 220,
+      DOB: new Date(32321354325432),
+      gender: 'test',
+    });
+    this.students = studentCopy;
+    console.warn(this.students);
+  }
+  ChangGender() {
+    let studentCopy = Object.assign([], this.students);
+    studentCopy[0].gender = 'Female';
+    this.students = studentCopy;
     console.warn(this.students);
   }
 }

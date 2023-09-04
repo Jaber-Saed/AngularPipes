@@ -5,15 +5,14 @@ import { StudentsModule } from '../students/students.module';
   name: 'fulter',
 })
 export class FulterPipe implements PipeTransform {
-  transform(student: StudentsModule[], filterText: string) {
-    if (student.length === 0 || filterText === '') {
-      return student;
-    } else {
+  transform(student: StudentsModule[], filterText: number) {
+    console.warn('Filter Pipe called!')
+
       return student.filter((student) => {
         return (
-          student.gender.toLocaleLowerCase === filterText.toLocaleLowerCase
+          student.marks >= filterText
         )
       });
-    }
+    
   }
 }

@@ -11,7 +11,7 @@ export class StudentsService {
     {
       name: 'Mark Vought',
       course: 'MBA',
-      marks: 520,
+      marks: 220,
       DOB: new Date(32321354325432),
       gender: 'Male',
     },
@@ -32,7 +32,7 @@ export class StudentsService {
     {
       name: 'Sofa',
       course: 'MBA',
-      marks: 520,
+      marks: 220,
       DOB: new Date(21354325432),
       gender: 'Female',
     },

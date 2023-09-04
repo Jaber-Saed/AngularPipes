@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PercentagePipe } from './percentage.pope';
+import { PercentagePipe } from './Pipes/percentage.pope';
 import { FulterPipe } from './Pipes/fulter.pipe';
 import { FormsModule } from '@angular/forms';
 

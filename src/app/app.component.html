@@ -1,5 +1,5 @@
 <div class="container">
-    <table class=" student">
+    <table class="student">
         <tr>
             <th>Name</th>
             <th>Course</th>
@@ -9,12 +9,12 @@
             <th>Gender</th>
         </tr>
         <tr *ngFor="let std of students">
-            <td>{{std.name}}</td>
-            <td>{{std.course}}</td>
-            <td>{{std.marks}}</td>
-            <td>{{std.marks / totalMarks * 100}}</td>
-            <td>{{std.DOB}}</td>
-            <td>{{std.gender }}</td>
+            <td>{{ std.name }}</td>
+            <td>{{ std.course }}</td>
+            <td>{{ std.marks }}</td>
+            <td>{{ (std.marks / totalMarks) * 100 }}</td>
+            <td>{{ std.DOB.toDateString() }}</td>
+            <td>{{ std.gender }}</td>
         </tr>
     </table>
 </div>

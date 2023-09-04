@@ -10,7 +10,8 @@ import { StudentsModule } from './students/students.module';
 })
 export class AppComponent implements OnInit {
   title = 'AngularPipes';
-  students: any[];
+  filterText: string;
+  students: StudentsModule[];
   totalMarks: number;
 
   constructor(private studentsService: StudentsService) {}

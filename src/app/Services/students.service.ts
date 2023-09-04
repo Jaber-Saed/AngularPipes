@@ -7,7 +7,7 @@ import { StudentsModule } from '../students/students.module';
 export class StudentsService {
   constructor() {}
 
-  _students: StudentsModule[] = [
+  students: StudentsModule[] = [
     {
       name: 'Mark Vought',
       course: 'MBA',
@@ -53,7 +53,5 @@ export class StudentsService {
   ];
 
   totalMarks: number = 600;
-  get students() {
-    return this._students;
-  }
+
 }

@@ -10,14 +10,16 @@ import { StudentsModule } from './students/students.module';
 })
 export class AppComponent implements OnInit {
   title = 'AngularPipes';
-  students: StudentsModule[];
+  students: any[];
   totalMarks: number;
 
   constructor(private studentsService: StudentsService) {}
 
   ngOnInit(): void {
-
-    this.students = this.studentsService.students
-    this.totalMarks = this.studentsService.totalMarks;
+    this.students = this.studentsService.students.map(x=> ({
+      ...x,
+      DOBs:x.DOB?.toDateString()}))
+      this.totalMarks = this.studentsService.totalMarks;
+    console.warn(this.students);
   }
 }

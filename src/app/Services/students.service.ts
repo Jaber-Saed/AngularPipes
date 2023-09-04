@@ -8,52 +8,54 @@ import { StudentsModule } from '../students/students.module';
 export class StudentsService {
   constructor() {}
 
-  students: StudentsModule[] = [
+  _students: StudentsModule[] = [
     {
       name: 'Mark Vought',
       course: 'MBA',
       marks: 520,
-      DOB: new Date('11-12-1997'),
+      DOB: new Date(32321354325432),
       gender: 'Male',
     },
     {
       name: 'Mark Vought',
       course: 'MBA',
       marks: 520,
-      DOB: new Date('11-12-1997'),
+      DOB: new Date(21354325432),
       gender: 'Male',
     },
     {
       name: 'Mark Vought',
       course: 'MBA',
       marks: 520,
-      DOB: new Date('11-12-1997'),
+      DOB: new Date(21354325432),
       gender: 'Male',
     },
     {
       name: 'Sofa',
       course: 'MBA',
       marks: 520,
-      DOB: new Date('11-12-1997'),
+      DOB: new Date(21354325432),
       gender: 'Female',
     },
     {
       name: 'Sofa',
       course: 'MBA',
       marks: 520,
-      DOB: new Date('11-12-1997'),
+      DOB: new Date(21354325432),
       gender: 'Female',
     },
     {
       name: 'Sofa',
       course: 'MBA',
       marks: 520,
-      DOB: new Date('11-12-1997'),
+      DOB: new Date(21354325432),
       gender: 'Female',
     },
   ];
 
-    totalMarks: number = 600;
-    
+  totalMarks: number = 600;
+  get students() {
+    return this._students;
+  }
 }
 

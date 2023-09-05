@@ -14,6 +14,13 @@ export class AppComponent implements OnInit {
   totalMarks: number;
   filtereStudents: StudentsModule[];
   private _filterText: number;
+  totalStudents = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(this.filtereStudents.length);
+    }, 2000);
+  })
+
+
   public get filterText(): number {
     return this._filterText;
   }
